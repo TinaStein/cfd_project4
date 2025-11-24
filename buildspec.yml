@@ -13,7 +13,7 @@ phases:
   build:
     commands:
       - npm run build 
-      - echp building the react static website for production...
+      - echo building the react static website for production...
 
 artifacts:
   files:
