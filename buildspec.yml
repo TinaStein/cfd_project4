@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install: 
+    runtime-verisons:
+      nodejs: 22
+    commands:
+      - echo installing NodeJS Verison 22....
+  pre_build: 
+    commands: 
+      - npm install 
+      - echo installing dependencies (node_modules).....
+  build:
+      - npm run build 
+      - echp building the react static website for production.... 
+
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build
