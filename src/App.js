@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
+
+  const [userName, setUserName] = useState("tina");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <h1>Cubs Stink!</h1>
+      <div>
+        <label>UserName: </label>
+        <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)}></input>
+      </div>
+
+      <h1>{userName}</h1>
     </div>
   );
 }
